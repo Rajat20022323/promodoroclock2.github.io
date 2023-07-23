@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Pomodoro Timer</h1>
+    </div>
+
+    <!-- Pomodoro Timer Section -->
+    <div class="pomodoro-container">
+      <h2>Pomodoro Timer</h2>
+      <div class="pomodoro-timer" id="pomodoro-timer">
+        <span id="pomodoro-minutes">25</span>:<span id="pomodoro-seconds">00</span>
+      </div>
+      <div class="pomodoro-controls">
+        <button class="start-btn" onclick="startTimer()">Start</button>
+        <button class="pause-btn" onclick="pauseTimer()">Pause</button>
+        <button class="reset-btn" onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Countdown Popup -->
+    <div class="countdown-popup" id="countdown-popup">
+      <div class="countdown-popup-content">
+        <h2>Timer Countdown</h2>
+        <div class="countdown-popup-timer" id="countdown-popup-timer">
+          <span id="popup-minutes">25</span>:<span id="popup-seconds">00</span>
+        </div>
+        <div class="popup-controls">
+          <button class="popup-start-btn" onclick="startTimer()">Start</button>
+          <button class="popup-pause-btn" onclick="pauseTimer()">Pause</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio Files -->
+    <audio id="click-sound" src="click.mp3" preload="auto"></audio>
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="pomodoro.js"></script>
+</body>
+</html>
